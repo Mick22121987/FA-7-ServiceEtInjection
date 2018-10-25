@@ -5,8 +5,9 @@
   </h4>
   <ul class="list-group">
     <li class="list-group-item"
-        *ngFor="let aliment of panier">
+        *ngFor="let aliment of panier; let index = index;">
       {{ aliment }}
+      <button (click)="remove(index)" class="btn btn-danger ml-auto">&times;</button>
     </li>
   </ul>
 </div>
